@@ -1,7 +1,6 @@
+import { useState } from 'react';
 
-import {useState} from "react";
-
-const SignUp = () => {
+const Signup = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -18,11 +17,15 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     // Add your signup logic here (e.g., API call, authentication, etc.)
+    // axios.post('./register',formData)
     console.log('Form submitted with data:', formData);
   };
 
   return (
+    <div>
+      <h1>register here</h1>
     <form onSubmit={handleSubmit}>
       <label>
         Username:
@@ -59,8 +62,8 @@ const SignUp = () => {
 
       <button type="submit">Sign Up</button>
     </form>
+    </div>
   );
 };
 
-export default SignUp;
-
+export default Signup;
